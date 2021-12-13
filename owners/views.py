@@ -21,7 +21,7 @@ class OwnersView(View):
         dogs_list = []
         for dog in dogs:
             dogs_list.append({'name': dog.name, 'age':dog.age})
-        return JsonResponse({'results_owners':owners_list, 'resulte_dogs':dogs_list}, status=200)
+        return JsonResponse({'results_owners':owners_list, 'results_dogs':dogs_list}, status=200)
 
 class DogsView(View):
     def post(self, request):
