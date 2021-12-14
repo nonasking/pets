@@ -37,5 +37,5 @@ class DogsView(View):
         dogs = Dogs.objects.all()
         dogs_list = []
         for dog in dogs:
-            dogs_list.append({'owner_id':dog.owner_id, 'name': dog.name, 'age':dog.age})
+            dogs_list.append({'owner':dog.owner.name, 'name': dog.name, 'age':dog.age})
         return JsonResponse({'results':dogs_list}, status=200)
